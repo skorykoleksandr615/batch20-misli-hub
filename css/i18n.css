@@ -1,0 +1,26 @@
+.lang-switch{position:relative;z-index:320;flex:0 0 auto}
+.lang-switch-btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.4rem .7rem;cursor:pointer;
+  border:2px solid var(--accent);background:#111;color:#fff;
+  font-size:.78rem;font-weight:800;transform:skewX(-7deg);
+}
+.lang-flag-img{width:22px;height:16px;object-fit:cover;display:block}
+.lang-switch-btn .lang-code{font-size:.68rem;font-weight:900;letter-spacing:.06em}
+.lang-switch-panel{
+  position:absolute;top:calc(100% + 6px);right:0;left:auto;
+  min-width:14rem;padding:.4rem;background:#111;border:2px solid var(--accent);
+  display:none;z-index:400;max-height:min(70vh,22rem);overflow:auto;
+}
+.lang-switch.is-open .lang-switch-panel{display:grid;gap:.2rem}
+.lang-option{
+  display:flex;align-items:center;gap:.5rem;width:100%;text-align:left;
+  padding:.5rem .6rem;border:0;background:transparent;color:#fff;cursor:pointer;font-weight:650;
+}
+.lang-option:hover,.lang-option.is-active{background:rgba(255,94,0,.2)}
+@media (max-width:1099px){
+  .lang-switch-btn .lang-name{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .lang-switch-btn{transform:none}
+}
